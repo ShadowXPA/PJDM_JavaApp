@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CreateGeolocationActivity"
+    android:scrollbars="vertical"
+    android:id="@+id/LLGN">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp">
+        <CheckBox
+            android:id="@+id/ACGNShared"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="@string/shared_note"
+            android:checked="false" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/note_title"
+            android:textSize="24sp"
+            android:textColor="@color/black" />
+        <LinearLayout
+            android:id="@+id/ACGNTitleField"
+            android:layout_width="match_parent"
+            android:layout_margin="5dp"
+            android:layout_height="wrap_content"
+            android:background="@color/lightgray"
+            android:padding="1dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white">
+                <EditText
+                    android:id="@+id/ACGNTitle"
+                    android:focusedByDefault="false"
+                    android:layout_width="match_parent"
+                    android:textSize="14sp"
+                    android:maxLength="22"
+                    android:gravity="center_horizontal"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="@string/location_"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/Lati"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:text="@string/latitude_"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp" />
+            <TextView
+                android:id="@+id/Longi"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:text="@string/longitude_"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp" />
+        </LinearLayout>
+
+        <fragment
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/map"
+
+            android:enabled="false"
+
+            android:layout_margin="14dp"
+            android:layout_width="match_parent"
+            android:layout_height="322dp"
+            android:name="com.google.android.gms.maps.MapFragment" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:layout_height="match_parent"
+                android:textColor="@color/black"
+                android:text="@string/photos_"
+                android:textSize="20sp" />
+            <Button
+                android:id="@+id/ButAddImg"
+                android:layout_width="0dp"
+                android:layout_weight="0.22"
+                android:text="@string/add_"
+                android:textAllCaps="false"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+        <GridView
+            android:id="@+id/GridV"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="14dp"
+            android:numColumns="4" />
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".CreateWeatherNoteActivity"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <CheckBox
+            android:id="@+id/ACWNShared"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="@string/shared_note"
+            android:checked="false" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/note_title"
+            android:textSize="24sp"
+            android:textColor="@color/black" />
+
+        <LinearLayout
+            android:id="@+id/ACWNTitleField"
+            android:layout_width="match_parent"
+            android:layout_margin="5dp"
+            android:layout_height="wrap_content"
+            android:background="@color/lightgray"
+            android:padding="1dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white">
+                <EditText
+                    android:id="@+id/ACWNTitle"
+                    android:layout_width="match_parent"
+                    android:focusedByDefault="false"
+                    android:textSize="14sp"
+                    android:maxLength="22"
+                    android:gravity="center_horizontal"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/description_"
+            android:textSize="20sp"
+            android:textColor="@color/black" />
+
+        <LinearLayout
+            android:id="@+id/ACWNDescriptionField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@color/lightgray"
+            android:padding="1dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white">
+                <EditText
+                    android:id="@+id/ACWNDescription"
+                    android:layout_width="match_parent"
+                    android:focusedByDefault="false"
+                    android:textSize="14sp"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_marginTop="22sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/weather_"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10sp"
+            android:layout_marginStart="22sp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/weather_"
+                android:textColor="@color/black"
+                android:textSize="17sp"/>
+            <TextView
+                android:id="@+id/ACWNWeatherValue"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:textSize="17sp"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10sp"
+            android:layout_marginStart="22sp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/description_"
+                android:textColor="@color/black"
+                android:textSize="17sp"/>
+            <TextView
+                android:id="@+id/ACWNWeatherDescValue"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:textSize="17sp"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_marginTop="22sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/main_"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10sp"
+            android:layout_marginStart="22sp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/temperature_"
+                android:textColor="@color/black"
+                android:textSize="17sp"/>
+            <TextView
+                android:id="@+id/ACWNTemperatureValue"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:textSize="17sp"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10sp"
+            android:layout_marginStart="22sp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/pressure_"
+                android:textColor="@color/black"
+                android:textSize="17sp"/>
+            <TextView
+                android:id="@+id/ACWNPressureValue"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:textSize="17sp"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10sp"
+            android:layout_marginStart="22sp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/humidity_"
+                android:textColor="@color/black"
+                android:textSize="17sp"/>
+            <TextView
+                android:id="@+id/ACWNHumidityValue"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:textSize="17sp"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10sp"
+            android:layout_marginStart="22sp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/minimum_"
+                android:textColor="@color/black"
+                android:textSize="17sp"/>
+            <TextView
+                android:id="@+id/ACWNMinTempValue"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:textSize="17sp"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10sp"
+            android:layout_marginStart="22sp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/maximum_"
+                android:textColor="@color/black"
+                android:textSize="17sp"/>
+            <TextView
+                android:id="@+id/ACWNMaxTempValue"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:textSize="17sp"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_marginTop="22sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/wind_"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10sp"
+            android:layout_marginStart="22sp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/speed_"
+                android:textColor="@color/black"
+                android:textSize="17sp"/>
+            <TextView
+                android:id="@+id/ACWNSpeedValue"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:textSize="17sp"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10sp"
+            android:layout_marginStart="22sp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/degree_"
+                android:textColor="@color/black"
+                android:textSize="17sp"/>
+            <TextView
+                android:id="@+id/ACWNDegreeValue"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:textSize="17sp"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10sp"
+            android:layout_marginStart="22sp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:textSize="17sp"/>
+            <TextView
+                android:id="@+id/ACWNDegreeStrValue"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:textSize="17sp"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_marginTop="22sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/city_"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10sp"
+            android:layout_marginStart="22sp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/city_"
+                android:textColor="@color/black"
+                android:textSize="17sp"/>
+            <TextView
+                android:id="@+id/ACWNCityValue"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:textSize="17sp"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10sp"
+            android:layout_marginStart="22sp"
+            android:layout_marginBottom="10sp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/country_"
+                android:textColor="@color/black"
+                android:textSize="17sp"/>
+            <TextView
+                android:id="@+id/ACWNCountryValue"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:textSize="17sp"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

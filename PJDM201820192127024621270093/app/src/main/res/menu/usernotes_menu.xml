@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/UNMSettings"
+        android:title="@string/settings"
+        android:showAsAction="ifRoom"
+        android:icon="@android:drawable/ic_menu_manage" />
+
+    <item
+        android:id="@+id/UNMTextNote"
+        android:title="@string/new_text_note"
+        android:showAsAction="never"
+        android:icon="@android:drawable/ic_menu_edit" />
+
+    <item
+        android:id="@+id/UNMDrawNote"
+        android:title="@string/new_draw_note"
+        android:showAsAction="never"
+        android:icon="@android:drawable/ic_menu_gallery" />
+
+    <item
+        android:id="@+id/UNMImageNote"
+        android:title="@string/new_image_note"
+        android:showAsAction="never"
+        android:icon="@android:drawable/ic_menu_camera" />
+
+    <item
+        android:id="@+id/UNMWeatherNote"
+        android:title="@string/new_weather_note"
+        android:showAsAction="never"
+        android:icon="@android:drawable/ic_menu_compass" />
+
+    <item
+        android:id="@+id/UNMGeolocationNote"
+        android:title="@string/new_geolocation_note"
+        android:showAsAction="never"
+        android:icon="@android:drawable/ic_menu_mylocation" />
+</menu>
