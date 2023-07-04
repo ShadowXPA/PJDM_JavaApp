@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:title="@string/Note_Settings">
+        <SwitchPreference
+            android:key="sharedListMode"
+            android:title="@string/SLM" />
+        <ListPreference
+            android:key="orderBy"
+            android:title="@string/OrderBy"
+            android:entries="@array/listArray"
+            android:defaultValue="0"
+            android:entryValues="@array/listValues" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="@string/Weather_Notes_Settings">
+        <SwitchPreference
+            android:key="metric"
+            android:title="@string/Metric_System"
+            android:defaultValue="true" />
+    </PreferenceCategory>
+</PreferenceScreen>
