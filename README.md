@@ -1,4 +1,4 @@
-# Java Programming for Mobile Devices
+# Java for Mobile Programming
 
 This subject focused on creating applications for Android phones using **Java**.
 
